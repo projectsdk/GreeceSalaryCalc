@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Your Salary</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Salary calculator</h1>
+    </header>
+    <main>
+        <div class="flex-column">
+            <form class="card">
+                <div class="flex-row">
+                    <label for="salaryInput">Monthly salary (Gross)</label>
+                    <input class="input" type="number" id="salaryInput" min="0" value="0" required>
+                </div>
+                <div class="flex-row">
+                    <label for="numChildrenInput">Dependent children</label>
+                    <input class="input" type="number" id="numChildrenInput" min="0" value="0">
+                </div>
+                <div class="flex-row">
+                    <label for="beFlexInput">BeFlex bonus</label>
+                    <input class="input" type="number" id="beFlexInput" min="0" placeholder="0" value="60">
+                </div>
+                <div class="flex-row">
+                    <label for="specialTaxRegimeInput">Special Tax Regime</label>
+                    <div class="input special">
+                        <input type="checkbox" id="specialTaxRegimeInput" checked>
+                    </div>
+                </div>
+                <button type="submit" id="calcButton">Calculate</button>
+            </form>
+        </div>
+
+        <div id="resultArea" class="card" hidden></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="./index.js"></script>
+
+</html>
