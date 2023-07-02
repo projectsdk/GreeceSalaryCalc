@@ -1,10 +1,15 @@
 * {
     box-sizing: border-box;
     border-radius: 4px;
-  }
+}
 
-label, button, h1, h2, h5, p {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+label,
+button,
+h1,
+h2,
+h5,
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
     margin-block: 0;
 }
@@ -49,7 +54,8 @@ h5 {
     justify-content: end;
 }
 
-.card, h1 {
+.card,
+h1 {
     border: 1px solid magenta;
     border-radius: 10px;
     width: 500px;
@@ -72,4 +78,40 @@ h5 {
 .special {
     display: flex;
     align-items: end;
+}
+
+@media (max-width: 767px) {
+    .flex-row {
+        flex-wrap: wrap;
+    }
+
+    .card,
+    h1 {
+        border: 1px solid magenta;
+        border-radius: 10px;
+        width: auto;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    label,
+    button,
+    h1,
+    h2,
+    h5,
+    p {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 100px !important;
+    }
+
+    .special {
+        justify-content: right;
+    }
 }
