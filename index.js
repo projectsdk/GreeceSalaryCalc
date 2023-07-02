@@ -10,40 +10,31 @@ function calcSalaryByMonthlyIncome(monthlyIncome, numChildrenInput, beFlexInput,
     if (income > 12000) {
         if (taxBase <= 10000) {
             tax += +(taxBase * 0.09).toFixed(2);
-            console.log('tax 1a', tax)
         } else {
             tax += +(10000 * 0.09).toFixed(2);
-            console.log('tax 1b', tax)
         }
 
         if (taxBase > 10000 && taxBase <= 20000) {
             tax += +((taxBase - 10000) * 0.22).toFixed(2);
-            console.log('tax 2a', tax)
         } else if (taxBase > 20000) {
             tax += +(10000 * 0.22).toFixed(2);
-            console.log('tax 2b', tax)
         }
 
         if (taxBase > 20000 && taxBase <= 30000) {
             tax += +((taxBase - 20000) * 0.28).toFixed(2);
-            console.log('tax 3a', tax)
         } else if (taxBase > 30000) {
             tax += +(10000 * 0.28).toFixed(2);
-            console.log('tax 3b', tax)
         }
 
 
         if (taxBase > 30000 && taxBase <= 40000) {
-            tax += ((taxBase - 30000) * 0.36).toFixed(2);
-            console.log('tax 4a', tax)
+            tax += +((taxBase - 30000) * 0.36).toFixed(2);
         } else if (taxBase > 40000) {
             tax += +(10000 * 0.36).toFixed(2);
-            console.log('tax 4b', tax)
         }
 
         if (taxBase > 40000) {
             tax += +((taxBase - 40000) * 0.44).toFixed(2);
-            console.log('tax 5', tax)
         }
 
         // 3 Tax credit:
